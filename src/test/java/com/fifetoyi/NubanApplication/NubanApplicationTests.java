@@ -1,7 +1,7 @@
 package com.fifetoyi.NubanApplication;
 
-import com.fifetoyi.NubanApplication.Model.Nuban;
-import com.fifetoyi.NubanApplication.Repository.NubanRepository;
+import com.fifetoyi.NubanApplication.model.Nuban;
+import com.fifetoyi.NubanApplication.repository.NubanRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

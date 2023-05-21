@@ -1,4 +1,4 @@
-package com.fifetoyi.NubanApplication.Model;
+package com.fifetoyi.NubanApplication.model;
 
 import jakarta.persistence.*;
 
