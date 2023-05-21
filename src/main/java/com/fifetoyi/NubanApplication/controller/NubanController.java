@@ -2,8 +2,8 @@ package com.fifetoyi.NubanApplication.controller;
 
 import com.fifetoyi.NubanApplication.model.Nuban;
 import com.fifetoyi.NubanApplication.repository.NubanRepository;
+import com.fifetoyi.NubanApplication.service.NubanService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

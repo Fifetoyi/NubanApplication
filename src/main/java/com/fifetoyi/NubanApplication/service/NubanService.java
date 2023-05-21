@@ -1,4 +1,4 @@
-package com.fifetoyi.NubanApplication.controller;
+package com.fifetoyi.NubanApplication.service;
 
 import com.fifetoyi.NubanApplication.model.Nuban;
 import com.fifetoyi.NubanApplication.repository.NubanRepository;
