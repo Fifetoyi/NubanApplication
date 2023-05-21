@@ -1,9 +1,11 @@
-package com.fifetoyi.NubanApplication.Controller;
+package com.fifetoyi.NubanApplication.controller;
 
-import com.fifetoyi.NubanApplication.Model.Nuban;
-import com.fifetoyi.NubanApplication.Repository.NubanRepository;
+import com.fifetoyi.NubanApplication.model.Nuban;
+import com.fifetoyi.NubanApplication.repository.NubanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Random;
 
 @RestController
 @RequestMapping("/nuban")
@@ -34,11 +36,11 @@ public class NubanController {
     }
 
     private String generateNuban(String bankCode, int serial) {
-        // Generate NUBAN logic here
-        // ...
+        Random random = new Random();
+        int randomNumber = random.nextInt(900000000) + 1000000000;
+        return String.valueOf(randomNumber);
 
-        // Just a dummy implementation to concatenate the bank code and serial
-        return bankCode + String.format("%09d", serial);
+//        return bankCode + String.format("%09d", serial);
     }
 
     @GetMapping
