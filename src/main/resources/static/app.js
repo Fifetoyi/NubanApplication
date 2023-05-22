@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 
 app.controller('myController', function($scope, $http) {
+    $scope.generatedNubans = [];
     $scope.bankCode = '';
     $scope.serial = '';
     $scope.nuban = '';
@@ -14,11 +15,12 @@ app.controller('myController', function($scope, $http) {
                 .then(function(response) {
                     $scope.nuban = response.data.nuban;
                     $scope.error = '';
+                    $scope.generatedNubans.push(response.data.nuban);
                 })
                 .catch(function(error) {
                     if (error.status === 409) {
                         $scope.nuban = '';
-                        $scope.error = 'An error occured. Please try again.';
+                        $scope.error = 'An error occurred. Please try again.';
                     } else {
                         $scope.nuban = '';
                         $scope.error = 'Duplicate serial number detected. Please enter a different serial number.';
@@ -27,7 +29,7 @@ app.controller('myController', function($scope, $http) {
                 });
         } else {
             $scope.nuban = '';
-            $scope.error = 'Please enter valid bank code and serial number.';
+            $scope.error = 'Please enter a valid bank code and serial number.';
         }
     };
 });

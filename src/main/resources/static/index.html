@@ -36,6 +36,13 @@
         <strong>Generated NUBAN: {{ nuban }}</strong>
     </div>
     <div class="alert alert-danger" role="alert" ng-if="error">{{ error }}</div>
+
+    <div id="generatedNubans">
+        <h2>All Generated NUBANs:</h2>
+        <ul>
+            <li ng-repeat="nuban in generatedNubans">{{ nuban }}</li>
+        </ul>
+    </div>
 </div>
 
 <script src="app.js"></script>
