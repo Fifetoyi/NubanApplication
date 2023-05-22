@@ -1,14 +1,13 @@
 var app = angular.module('myApp', []);
 
 app.controller('myController', function($scope, $http) {
+    $scope.serial = '';
+    $scope.bankCode = '';
     $scope.submitForm = function() {
         if ($scope.nubanForm.$valid) {
-            var data = {
-                bankCode: $scope.bankCode,
-                serial: $scope.serial
-            };
+            var url = '/nuban?bankCode=' + encodeURIComponent($scope.bankCode) + '&serial=' + encodeURIComponent($scope.serial);
 
-            $http.post('/nuban', data)
+            $http.post(url)
                 .then(function(response) {
                     $scope.nuban = response.data.nuban;
                 })
