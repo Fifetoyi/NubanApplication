@@ -1,4 +1,4 @@
-package com.fifetoyi.NubanApplication;
+package com.fifetoyi.nuban;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.fifetoyi.NubanApplication.service;
+package com.fifetoyi.nuban.service;
 
-import com.fifetoyi.NubanApplication.model.Nuban;
-import com.fifetoyi.NubanApplication.repository.NubanRepository;
+import com.fifetoyi.nuban.model.Nuban;
+import com.fifetoyi.nuban.repository.NubanRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;

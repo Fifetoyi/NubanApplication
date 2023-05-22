@@ -1,6 +1,6 @@
-package com.fifetoyi.NubanApplication.repository;
+package com.fifetoyi.nuban.repository;
 
-import com.fifetoyi.NubanApplication.model.Nuban;
+import com.fifetoyi.nuban.model.Nuban;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
