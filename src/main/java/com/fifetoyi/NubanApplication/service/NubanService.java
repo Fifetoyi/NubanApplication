@@ -2,9 +2,11 @@ package com.fifetoyi.NubanApplication.service;
 
 import com.fifetoyi.NubanApplication.model.Nuban;
 import com.fifetoyi.NubanApplication.repository.NubanRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.Random;
 
+@Service
 public class NubanService {
 
     private final NubanRepository nubanRepository;
