@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+
+<head>
+    <title>NUBAN Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="myController">
+
+<div class="container">
+    <h1>NUBAN Generator</h1>
+
+    <form ng-submit="submitForm()" name="nubanForm" novalidate>
+        <div class="form-group">
+            <label for="bankCode">Bank Institution Code:</label>
+            <input type="text" id="bankCode" class="form-control" ng-model="bankCode" required>
+            <div ng-show="nubanForm.bankCode.$invalid && nubanForm.bankCode.$touched">
+                <span class="text-danger">Bank Institution Code is required.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="serial">Serial:</label>
+            <input type="text" id="serial" class="form-control" ng-model="serial" required>
+            <div ng-show="nubanForm.serial.$invalid && nubanForm.serial.$touched">
+                <span class="text-danger">Serial is required.</span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate NUBAN</button>
+    </form>
+
+    <div class="alert alert-success mt-3" ng-if="nuban">
+        Generated NUBAN: {{ nuban }}
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>
