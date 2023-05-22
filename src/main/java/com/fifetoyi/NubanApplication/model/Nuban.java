@@ -11,6 +11,7 @@ public class Nuban {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String bankCode;
+    @Column(unique=true)
     private int serial;
     private String nuban;
 
